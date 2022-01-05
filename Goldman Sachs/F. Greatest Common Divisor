@@ -1,0 +1,23 @@
+class Solution {
+public:
+     string gcd(string s1, string s2)
+{
+   if(s1.length()<s2.length())
+   {
+      return gcd(s2,s1);
+   }
+    else if(s2=="")return s1;
+    else if(s1.find(s2)!=0)return "";
+    else
+    {
+       return gcd(s1.substr(s2.length()),s2);
+    }
+   
+}
+ 
+    
+    string gcdOfStrings(string str1, string str2) {
+        string ANS = gcd(str1, str2);
+        return ANS;
+    }
+};
